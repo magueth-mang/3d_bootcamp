@@ -44,7 +44,13 @@ export default function Header() {
                 transition: "transform 0.2s ease",
               }}
             >
-              <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path
+                d="M1 1L5 5L9 1"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </button>
 
@@ -66,8 +72,12 @@ export default function Header() {
           )}
         </div>
 
-        <Link href="/mentors" className="nav-link">Mentors</Link>
-        <Link href="/a-propos" className="nav-link">À propos</Link>
+        <Link href="/mentors" className="nav-link">
+          Mentors
+        </Link>
+        <Link href="/a-propos" className="nav-link">
+          À propos
+        </Link>
       </nav>
 
       {/* CTA */}
@@ -75,7 +85,13 @@ export default function Header() {
         <span>Contact</span>
         <span className="btn-arrow">
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-            <path d="M2 5H8M8 5L5.5 2.5M8 5L5.5 7.5" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path
+              d="M2 5H8M8 5L5.5 2.5M8 5L5.5 7.5"
+              stroke="black"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </span>
       </Link>

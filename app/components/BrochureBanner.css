@@ -1,0 +1,110 @@
+/* ── Banner ── */
+.brochure-banner {
+  width: 100%;
+  background: #1f1f1f;
+  padding: 5rem 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  height: 360px;
+}
+
+/* ── Gauche ── */
+.brochure-banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+}
+
+.brochure-banner-title {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.btn-brochure-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fff600;
+  color: #1a1a1a;
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.8em 2em;
+  border-radius: 100px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(255, 246, 0, 0.3);
+  transition: box-shadow 0.2s, transform 0.2s;
+  width: fit-content;
+}
+
+.btn-brochure-banner:hover {
+  box-shadow: 0 6px 28px rgba(255, 246, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ── Centre — demi-cercle ── */
+.brochure-banner-deco {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  left: 42%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(105deg) skewX(6deg);
+  -webkit-mask-image: url("/assets/demi-cercle.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url("/assets/demi-cercle.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  background: linear-gradient(135deg, #ffd700 0%, #c8a800 100%);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Droite — logo ── */
+.brochure-banner-right {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.brochure-banner-logo {
+  width: 580px;
+  max-width: 45vw;
+  height: auto;
+}
+
+/* ── Responsive 768px ── */
+@media (max-width: 768px) {
+  .brochure-banner {
+    padding: 4rem 6vw;
+    min-height: unset;
+  }
+
+  .brochure-banner-title {
+    font-size: 32px;
+  }
+
+  .brochure-banner-right {
+    display: none;
+  }
+
+  .brochure-banner-deco {
+    width: 420px;
+    height: 420px;
+    opacity: 0.6;
+  }
+}

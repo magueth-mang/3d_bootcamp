@@ -3,7 +3,6 @@ import { GraduationCap } from "lucide-react";
 export default function FormationsSection() {
   return (
     <section className="formations-section">
-
       {/* Demi-anneau gauche — dégradé jaune, ouverture vers la droite */}
       <div className="deco-ring deco-ring-left" />
 
@@ -11,22 +10,24 @@ export default function FormationsSection() {
       <div className="deco-ring deco-ring-right" />
 
       <div className="formations-inner">
-
         {/* LEFT */}
         <div className="formations-left">
-
           {/* Badge */}
           <div className="formations-badge">
             <span className="formations-badge-icon">
               <GraduationCap size={28} color="#000" strokeWidth={2} />
             </span>
-            <span className="formations-badge-label">Nos formations diplômantes</span>
+            <span className="formations-badge-label">
+              Nos formations diplômantes
+            </span>
           </div>
 
           {/* Title */}
           <h2 className="formations-title">
             Nos formations diplômantes suivies par{" "}
-            <span className="formations-title-accent">plus de 100 étudiants.</span>
+            <span className="formations-title-accent">
+              plus de 100 étudiants.
+            </span>
           </h2>
 
           {/* Subtitle */}
@@ -90,7 +91,6 @@ export default function FormationsSection() {
             />
           </div>
         </div>
-
       </div>
     </section>
   );

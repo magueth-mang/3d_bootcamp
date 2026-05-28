@@ -1,0 +1,286 @@
+/* ── Section ── */
+.nosformations-section {
+  width: 100%;
+  padding: 9rem 8vw;
+  background-color: #1f1f1f;
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent 98px,
+    #1b1b1b 98px,
+    #1b1b1b 100px
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  position: relative;
+}
+
+/* ── Header ── */
+.nosformations-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.nosformations-tag {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #fff600;
+  background: rgba(255, 246, 0, 0.1);
+  border: 1px solid rgba(255, 246, 0, 0.3);
+  border-radius: 100px;
+  padding: 0.3em 1em;
+}
+
+.nosformations-title {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.nosformations-subtitle {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Cards ── */
+.nosformations-cards {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  max-width: 900px;
+}
+
+.nosformations-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2.4rem 2.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.nosformations-card:hover {
+  background: rgba(255, 246, 0, 0.04);
+  border-color: rgba(255, 246, 0, 0.3);
+}
+
+.nosformations-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.nosformations-card-badge {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #fff600;
+}
+
+.nosformations-card-title {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.nosformations-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nosformations-card-tag {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: #fff600;
+  border-radius: 100px;
+  padding: 0.2em 0.9em;
+  letter-spacing: 0.05em;
+}
+
+.nosformations-card-duration {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  padding: 0.2em 0.9em;
+}
+
+.nosformations-card-desc {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Boutons card */
+.nosformations-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btn-nosformations-primary {
+  display: block;
+  text-align: center;
+  background: #fff600;
+  color: #1a1a1a;
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.75em 1.4em;
+  border-radius: 100px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(255, 246, 0, 0.25);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.btn-nosformations-primary:hover {
+  box-shadow: 0 6px 24px rgba(255, 246, 0, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-nosformations-ghost {
+  display: block;
+  text-align: center;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75em 1.4em;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-nosformations-ghost:hover {
+  border-color: rgba(255, 246, 0, 0.4);
+  color: #fff600;
+  transform: translateY(-2px);
+}
+
+/* Séparateur vertical */
+.nosformations-divider {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 1rem 2.5rem;
+  flex-shrink: 0;
+}
+
+/* ── Brochure ── */
+.nosformations-brochure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.nosformations-brochure-text {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+.btn-nosformations-brochure {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  color: #ffffff;
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.85em 2em;
+  border-radius: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-nosformations-brochure:hover {
+  border-color: #fff600;
+  color: #fff600;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive 1024px ── */
+@media (max-width: 1024px) {
+  .nosformations-section {
+    padding: 7rem 6vw;
+    gap: 4rem;
+  }
+
+  .nosformations-title {
+    font-size: 34px;
+  }
+
+  .nosformations-divider {
+    margin: 1rem 1.5rem;
+  }
+}
+
+/* ── Responsive 768px ── */
+@media (max-width: 768px) {
+  .nosformations-section {
+    padding: 6rem 6vw;
+    gap: 3.5rem;
+  }
+
+  .nosformations-title {
+    font-size: 26px;
+  }
+
+  .nosformations-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .nosformations-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nosformations-divider {
+    display: none;
+  }
+
+  .nosformations-card {
+    padding: 1.8rem 1.6rem;
+  }
+
+  .nosformations-card-title {
+    font-size: 22px;
+  }
+}

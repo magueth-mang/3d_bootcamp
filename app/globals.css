@@ -1,13 +1,16 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 :root {
-  --background: #1f1f1f;
+  --background: #ffffff;
   --foreground: #ffffff;
 }
 
@@ -112,12 +115,13 @@ body {
   flex-direction: column;
   gap: 0.1rem;
   min-width: 210px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 0 0.5px rgba(255,255,255,0.04);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 0.5px rgba(255, 255, 255, 0.04);
 }
 
 /* bridge invisible pour que la souris ne perde pas le focus en passant du bouton au menu */
 .dropdown-menu::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -14px;
   left: 0;
@@ -126,7 +130,7 @@ body {
 }
 
 .dropdown-menu::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -5px;
   left: 50%;
@@ -530,10 +534,10 @@ a.header-cta {
   left: 0;
   top: 40%;
   transform: translateX(-55%) translateY(-50%) rotate(90deg);
-  -webkit-mask-image: url('/assets/demi-cercle.png');
+  -webkit-mask-image: url("/assets/demi-cercle.png");
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-  mask-image: url('/assets/demi-cercle.png');
+  mask-image: url("/assets/demi-cercle.png");
   mask-size: contain;
   mask-repeat: no-repeat;
   background: linear-gradient(135deg, #fff600 0%, #c8c8c8 100%);
@@ -547,14 +551,14 @@ a.header-cta {
   right: 0;
   bottom: 0;
   transform: translateX(58%) translateY(10%) rotate(-90deg);
-  -webkit-mask-image: url('/assets/demi-cercle.png');
+  -webkit-mask-image: url("/assets/demi-cercle.png");
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-  mask-image: url('/assets/demi-cercle.png');
+  mask-image: url("/assets/demi-cercle.png");
   mask-size: contain;
   mask-repeat: no-repeat;
   background: #5a5a5a;
-  opacity: 0.18;
+  opacity: 0.3;
 }
 
 /* ── Demi-anneaux déco hero ──────────────────────────── */
@@ -563,10 +567,10 @@ a.header-cta {
   position: absolute;
   pointer-events: none;
   z-index: 0;
-  -webkit-mask-image: url('/assets/demi-cercle.png');
+  -webkit-mask-image: url("/assets/demi-cercle.png");
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-  mask-image: url('/assets/demi-cercle.png');
+  mask-image: url("/assets/demi-cercle.png");
   mask-size: contain;
   mask-repeat: no-repeat;
 }

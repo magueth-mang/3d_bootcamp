@@ -1,6 +1,14 @@
 import Fireflies from "./components/Fireflies";
 import Counters from "./components/Counters";
 import FormationsSection from "./components/FormationsSection";
+import WhyTendrillSection from "./components/WhyTendrillSection";
+import LuxeSection from "./components/LuxeSection";
+import AproposSection from "./components/AproposSection";
+import ObjectifSection from "./components/ObjectifSection";
+import RejoignezSection from "./components/RejoignezSection";
+import NosFormationsSection from "./components/NosFormationsSection";
+import BrochureBanner from "./components/BrochureBanner";
+import FaqSection from "./components/FaqSection";
 
 export default function Home() {
   return (
@@ -65,7 +73,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <WhyTendrillSection />
+      <LuxeSection />
+      <AproposSection />
+      <ObjectifSection />
+      <RejoignezSection />
+      <NosFormationsSection />
       <FormationsSection />
+      <BrochureBanner />
+      <FaqSection />
     </main>
   );
 }

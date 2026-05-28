@@ -65,12 +65,11 @@ export default function Fireflies() {
             position: "absolute",
             top: f.top,
             left: f.left,
-            width: f.size,
-            height: f.size,
+            width: f.size + 2,
+            height: f.size + 2,
             borderRadius: "50%",
             background: "#fff600",
-            boxShadow: `0 0 ${f.size * 2}px ${f.size}px rgba(255,246,0,0.35)`,
-            opacity: 0.6,
+            opacity: 0.3,
           }}
         />
       ))}
