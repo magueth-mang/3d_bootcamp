@@ -46,6 +46,18 @@
   transform: translate(65%, 0%) rotate(-90deg);
 }
 
+.novice-ring-skills-tl {
+  top: 0;
+  left: 0;
+  transform: translate(-48%, -45%) rotate(135deg);
+}
+
+.novice-ring-prereq-mr {
+  top: 50%;
+  right: 0;
+  transform: translate(48%, -50%) rotate(-45deg);
+}
+
 /* Scroll indicator */
 .novice-scroll-indicator {
   position: absolute;
@@ -158,71 +170,54 @@
 }
 
 .novice-badge svg {
+.novice-badge svg {
   color: #fff600;
   flex-shrink: 0;
 }
 
-/* ── Section compétences ── */
-.novice-skills-section {
-  width: 100%;
-  padding: 10rem 8vw 7rem;
-  background: #ffffff;
-}
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .novice-ring-tl,
+  .novice-ring-tr {
+    width: 300px;
+    height: 300px;
+  }
 
-.novice-skills-header {
-  display: flex;
-  flex-direction: column;
+  .novice-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .novice-badges {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .novice-badge {
+    font-size: 0.82rem;
+  }
+}
+  justify-content: space-between;
   gap: 1rem;
-  max-width: 520px;
-  margin-bottom: 3rem;
-}
-
-.novice-skills-title-wrap {
-  display: inline-flex;
-  flex-direction: column;
-  width: fit-content;
-  gap: 0.4rem;
-}
-
-.novice-skills-title {
-  font-family: "Eudoxus Sans", sans-serif;
-  font-size: 38px;
-  font-weight: 800;
-  color: #1a1a1a;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.novice-skills-underline {
-  width: 100%;
-  height: 3px;
-  background: #fff600;
-  border-radius: 2px;
-}
-
-.novice-skills-intro {
-  font-family: "Eudoxus Sans", sans-serif;
-  font-size: 1.15rem;
-  font-weight: 400;
-  color: rgba(26, 26, 26, 0.6);
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* ── Body : image + blocs ── */
-.novice-skills-body {
-  display: flex;
-  align-items: flex-start;
-  gap: 3rem;
   margin-top: 0;
+}
+
+/* Colonne gauche */
+.novice-skills-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex: 0 0 40%;
 }
 
 /* Image gauche */
 .novice-skills-img {
-  flex: 0 0 26%;
+  width: 100%;
   border-radius: 14px;
   overflow: hidden;
-  height: 360px;
+  height: 380px;
+  background: #f0f0f0;
+  border: 1px solid #e5e5e5;
 }
 
 .novice-skills-img img {
@@ -237,6 +232,8 @@
   flex: 0 0 52%;
   position: relative;
   height: 360px;
+  align-self: flex-end;
+  margin-bottom: 2rem;
 }
 
 /* Card générique */
@@ -334,7 +331,382 @@
   margin-top: 0.4rem;
 }
 
+/* ── CTA brochure ── */
+.novice-skills-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.novice-skills-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  background: #fff600;
+  border-radius: 100px;
+  padding: 0.85em 2em;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(255, 246, 0, 0.35);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.novice-skills-cta-btn:hover {
+  background: #f0e800;
+  box-shadow: 0 6px 24px rgba(255, 246, 0, 0.5);
+}
+
+/* ── Section prérequis ── */
+.prereq-section {
+  width: 100%;
+  padding: 10rem 8vw;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.prereq-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 13rem;
+}
+
+/* Gauche */
+.prereq-left {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.prereq-title {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: clamp(25px, 2.7vw, 39px);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Highlight GSAP */
+.prereq-highlight {
+  background-image: linear-gradient(135deg, #fff600 0%, #fff600 100%);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 100%;
+  padding-bottom: 2px;
+  color: #1a1a1a;
+  border-radius: 3px;
+  padding: 0 4px;
+}
+
+.prereq-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.prereq-text {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.prereq-text strong {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.prereq-text--label {
+  font-weight: 500;
+  color: #1a1a1a;
+  font-size: 0.85rem;
+  margin-bottom: -0.6rem;
+}
+
+.prereq-text--footer {
+  color: #1a1a1a;
+  font-size: 0.85rem;
+  border-left: 3px solid rgba(255, 246, 0, 0.6);
+  padding-left: 1.2rem;
+}
+
+.prereq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.prereq-list li {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.prereq-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff600;
+  flex-shrink: 0;
+}
+
+/* Droite — placeholder image */
+.prereq-img-placeholder {
+  flex: 1;
+  min-height: 560px;
+  border-radius: 16px;
+  background: #f0f0f0;
+  border: 1px solid #e5e5e5;
+}
+
 /* ── Responsive ── */
+@media (max-width: 1400px) {
+  .prereq-section {
+    padding: 8rem 6vw;
+  }
+
+  .prereq-inner {
+    gap: 3.5rem;
+  }
+
+  .prereq-left {
+    flex: 0 0 58%;
+  }
+
+  .prereq-img-placeholder {
+    min-height: 460px;
+  }
+
+  .prereq-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .prereq-section {
+    padding: 7rem 5vw;
+  }
+
+  .prereq-inner {
+    gap: 2.5rem;
+  }
+
+  .prereq-left {
+    flex: 0 0 60%;
+  }
+
+  .prereq-img-placeholder {
+    min-height: 380px;
+  }
+
+  .prereq-text {
+    font-size: 0.82rem;
+  }
+
+  .prereq-list li {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .prereq-inner {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .prereq-left {
+    flex: none;
+    width: 100%;
+  }
+
+  .prereq-img-placeholder {
+    width: 100%;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prereq-section {
+    padding: 5rem 6vw;
+  }
+
+  .prereq-title {
+    font-size: 24px;
+  }
+
+  .prereq-text {
+    font-size: 0.8rem;
+  }
+
+  .prereq-list li {
+    font-size: 0.8rem;
+  }
+
+  .prereq-img-placeholder {
+    min-height: 220px;
+  }
+}
+@media (max-width: 1400px) {
+  .novice-skills-section {
+    padding: 8rem 6vw 5rem;
+  }
+
+  .novice-skills-title {
+    font-size: 30px;
+  }
+
+  .novice-skills-intro {
+    font-size: 1rem;
+  }
+
+  .novice-skills-left {
+    flex: 0 0 32%;
+  }
+
+  .novice-skills-blocks {
+    flex: 0 0 54%;
+    height: 320px;
+  }
+
+  .novice-skills-img {
+    height: 300px;
+  }
+
+  .novice-skill-card {
+    width: 47%;
+    padding: 1rem 1.1rem 0;
+  }
+
+  .novice-skill-card-title {
+    font-size: 1.1rem;
+    padding-top: 1.3rem;
+  }
+
+  .novice-skill-card-list li {
+    font-size: 0.88rem;
+  }
+
+  .novice-skill-card-bg {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .novice-skills-section {
+    padding: 7rem 5vw 4rem;
+  }
+
+  .novice-skills-title {
+    font-size: 26px;
+  }
+
+  .novice-skills-intro {
+    font-size: 0.92rem;
+  }
+
+  .novice-skills-left {
+    flex: 0 0 30%;
+    gap: 2rem;
+  }
+
+  .novice-skills-blocks {
+    flex: 0 0 58%;
+    height: 290px;
+    margin-bottom: 1.5rem;
+  }
+
+  .novice-skills-img {
+    height: 260px;
+  }
+
+  .novice-skill-card {
+    width: 50%;
+    padding: 0.9rem 1rem 0;
+  }
+
+  .novice-skill-card-title {
+    font-size: 1rem;
+    padding-top: 1.2rem;
+  }
+
+  .novice-skill-card-list li {
+    font-size: 0.82rem;
+  }
+
+  .novice-skill-card-bg {
+    font-size: 3.2rem;
+    top: 1rem;
+  }
+
+  .novice-skill-card--3 {
+    bottom: 0;
+    left: 5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .novice-skills-body {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .novice-skills-left {
+    flex: none;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .novice-skills-header {
+    flex: 0 0 42%;
+  }
+
+  .novice-skills-img {
+    flex: 1;
+    height: 280px;
+  }
+
+  .novice-skills-blocks {
+    flex: none;
+    width: 100%;
+    height: auto;
+    align-self: auto;
+    margin-bottom: 0;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .novice-skill-card {
+    position: static;
+    width: 100%;
+    border: 1px solid #eeeeee;
+    background: #fafafa;
+    border-radius: 14px;
+  }
+
+  .novice-skill-card-bg {
+    font-size: 3.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .novice-ring-tl,
   .novice-ring-tr {
@@ -354,5 +726,30 @@
 
   .novice-badge {
     font-size: 0.82rem;
+  }
+
+  .novice-skills-section {
+    padding: 6rem 6vw 5rem;
+  }
+
+  .novice-skills-left {
+    flex-direction: column;
+  }
+
+  .novice-skills-header {
+    flex: none;
+    width: 100%;
+  }
+
+  .novice-skills-img {
+    height: 240px;
+  }
+
+  .novice-skills-title {
+    font-size: 28px;
+  }
+
+  .novice-skills-cta {
+    margin-top: 3rem;
   }
 }

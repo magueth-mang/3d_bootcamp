@@ -1,0 +1,408 @@
+/* ── Section programme ── */
+.program-section {
+  width: 100%;
+  padding: 10rem 8vw;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Layout principal ── */
+.program-layout {
+  position: relative;
+}
+
+/* ── Track gauche — absolute dans le padding ── */
+.program-track {
+  position: absolute;
+  left: calc(-8vw + 3vw);
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.program-track-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background: #e0e0e0;
+  border-radius: 2px;
+}
+
+.program-track-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top center;
+  width: 3px;
+  background: #fff600;
+  border-radius: 2px;
+}
+
+.program-track-dot {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d0d0d0;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #d0d0d0;
+  transition: background 0.3s;
+  z-index: 1;
+}
+
+/* ── Steps ── */
+.program-steps {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.program-step {
+  padding: 3.5rem 0;
+}
+
+.program-step-divider {
+  display: none;
+}
+
+/* Header : titre + numéro — inside content block */
+.program-step-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.program-step-title {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Highlight GSAP */
+.program-step-highlight {
+  background-image: linear-gradient(135deg, #fff600 0%, #fff600 100%);
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 0% 40%;
+  padding-bottom: 2px;
+}
+
+.program-step-num {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 800;
+  color: #fff600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+  margin-left: 2rem;
+}
+
+/* Body : texte + media */
+.program-step-body {
+  display: flex;
+  align-items: stretch;
+  gap: 12rem;
+}
+
+.program-step-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.program-step-intro {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.program-step-intro strong,
+.program-step-desc strong {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.program-step-desc {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.program-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.program-step-list li {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #383838;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.program-step-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff600;
+  border: 1.5px solid #1a1a1a;
+  flex-shrink: 0;
+}
+
+.program-step-arrow {
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #888888;
+  font-style: italic;
+  margin: 0.4rem 0 0;
+  padding-left: 0.2rem;
+}
+
+/* ── Media placeholders ── */
+.program-step-media {
+  flex: 0 0 35%;
+  border-radius: 12px;
+  background: #f2f2f2;
+  border: 1px solid #e8e8e8;
+  align-self: stretch;
+}
+
+/* Variant 1 — single tall rectangle */
+.program-step-media--single {
+  min-height: 220px;
+}
+
+/* Variant 2 — two stacked rectangles */
+.program-step-media--double {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: transparent;
+  border: none;
+}
+
+.program-step-media-top {
+  flex: 1;
+  border-radius: 10px;
+  background: #f2f2f2;
+  border: 1px solid #e8e8e8;
+}
+
+.program-step-media-bot {
+  flex: 1;
+  border-radius: 10px;
+  background: #ebebeb;
+  border: 1px solid #e8e8e8;
+}
+
+/* Variant 3 — wide video-style */
+.program-step-media--wide {
+  min-height: 180px;
+  background: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-step-media-play {
+  font-size: 1.6rem;
+  color: rgba(26, 26, 26, 0.25);
+}
+
+/* ── Deco rings ── */
+.program-ring {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  -webkit-mask-image: url("/assets/demi-cercle.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url("/assets/demi-cercle.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  background: linear-gradient(135deg, #fff600 0%, #c8c8c8 100%);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.program-ring--tl {
+  top: 10%;
+  left: -2%;
+  transform: translate(-48%, -45%) rotate(88deg);
+}
+
+.program-ring--br {
+  bottom: 15%;
+  right: -3%;
+  transform: translate(48%, 45%) rotate(-88deg);
+}
+
+/* ── CTA ── */
+.program-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+}
+
+.program-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Eudoxus Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 100px;
+  padding: 0.85em 2em;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.program-cta-btn--primary {
+  color: #1a1a1a;
+  background: #fff600;
+  box-shadow: 0 4px 16px rgba(255, 246, 0, 0.35);
+}
+
+.program-cta-btn--primary:hover {
+  background: #f0e800;
+  box-shadow: 0 6px 24px rgba(255, 246, 0, 0.5);
+}
+
+.program-cta-btn--outline {
+  color: #1a1a1a;
+  background: #fff600;
+  border: 2px solid #fff600;
+  box-shadow: 0 4px 16px rgba(255, 246, 0, 0.35);
+}
+
+.program-cta-btn--outline:hover {
+  background: #f0e800;
+  border-color: #f0e800;
+  box-shadow: 0 6px 24px rgba(255, 246, 0, 0.5);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1400px) {
+  .program-track {
+    left: calc(-8vw + 2.5vw);
+  }
+}
+
+@media (max-width: 1200px) {
+  .program-track {
+    left: calc(-8vw + 2vw);
+  }
+
+  .program-step-num {
+    font-size: 22px;
+  }
+
+  .program-step-media {
+    flex: 0 0 32%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .program-section {
+    padding: 7rem 6vw;
+  }
+
+  .program-track {
+    left: calc(-6vw + 1.5vw);
+  }
+
+  .program-step-body {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .program-step-media,
+  .program-step-media--single,
+  .program-step-media--wide {
+    flex: none;
+    width: 100%;
+    height: 200px;
+    min-height: unset;
+  }
+
+  .program-step-media--double {
+    flex: none;
+    width: 100%;
+    height: 200px;
+    min-height: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .program-section {
+    padding: 5rem 5vw;
+  }
+
+  /* Cache la frise sur mobile, trop étroit */
+  .program-track {
+    display: none;
+  }
+
+  .program-step {
+    padding: 2.5rem 0;
+    border-left: 3px solid #e0e0e0;
+    padding-left: 1.4rem;
+    margin-left: 1rem;
+  }
+
+  .program-step-header {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .program-step-num {
+    font-size: 22px;
+    margin-left: 1rem;
+  }
+
+  .program-step-title {
+    font-size: 20px;
+  }
+
+  .program-step-media--single,
+  .program-step-media--wide {
+    height: 160px;
+    min-height: unset;
+  }
+}

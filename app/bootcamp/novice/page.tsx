@@ -3,6 +3,10 @@
 import "./novice.css";
 import Fireflies from "../../components/Fireflies";
 import Counters from "../../components/Counters";
+import ProgramSection from "./ProgramSection";
+import PortfolioSection from "./PortfolioSection";
+import SkillsSection from "./SkillsSection";
+import PrereqSection from "./PrereqSection";
 
 export default function BootcampNovicePage() {
   return (
@@ -78,56 +82,13 @@ export default function BootcampNovicePage() {
       </section>
 
       {/* Section compétences */}
-      <section className="novice-skills-section">
-        {/* Header au-dessus */}
-        <div className="novice-skills-header">
-          <div className="novice-skills-title-wrap">
-            <h2 className="novice-skills-title">Compétences acquises</h2>
-            <div className="novice-skills-underline" />
-          </div>
-          <p className="novice-skills-intro">
-            À la sortie du bootcamp avancé, l&apos;élève auras les compétences
-            suivantes :
-          </p>
-        </div>
+      <SkillsSection />
 
-        {/* Contenu : image + blocs */}
-        <div className="novice-skills-body">
-          {/* Image */}
-          <div className="novice-skills-img">
-            <img
-              src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80"
-              alt="3D render"
-            />
-          </div>
+      {/* Section prérequis */}
+      <PrereqSection />
 
-          {/* Blocs compétences */}
-          <div className="novice-skills-blocks">
-            {[
-              { num: "01", title: "Compétences techniques" },
-              { num: "02", title: "Compétences techniques" },
-              { num: "03", title: "Compétences techniques" },
-            ].map((block, i) => (
-              <div
-                key={i}
-                className={`novice-skill-card novice-skill-card--${i + 1}`}
-              >
-                <span className="novice-skill-card-bg">{block.num}</span>
-                <div className="novice-skill-card-content">
-                  <h3 className="novice-skill-card-title">{block.title}</h3>
-                  <ul className="novice-skill-card-list">
-                    <li>Produire une publicité 3D complète</li>
-                    <li>
-                      Créer des simulations réalistes (liquides, particules)
-                    </li>
-                  </ul>
-                </div>
-                <div className="novice-skill-card-bar" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProgramSection />
+      <PortfolioSection />
     </main>
   );
 }
